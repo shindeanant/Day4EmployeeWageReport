@@ -10,14 +10,16 @@ public class EmployeeWage {
 
 	int partTimeHours = 4;
 
+	int empHr;
+
 	public void Wlcm() {
 
 		System.out.println("Welcome to Employee Wage Computation Program ");
 	}
 
-	public void employeeAttdence() {
+	public void employeeAttendance() {
 
-		double empCheck = Math.floor(Math.random() * 10) % 2;
+		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 
 		System.out.println(empCheck);
 
@@ -28,6 +30,34 @@ public class EmployeeWage {
 
 		else {
 			System.out.println("Employee is Absent");
+		}
+
+	}
+
+	public void attendanceBySwitchCase() {
+
+		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+
+		System.out.println(empCheck);
+
+		switch (empCheck) {
+
+		case 1:
+			empHr = 8;
+			System.out.print("full time present");
+			break;
+		case 2:
+			empHr = 4;
+			System.out.print("part time");
+			break;
+		case 0:
+			empHr = 0;
+			System.out.println("absent");
+			break;
+
+		default:
+			empHr = 0;
+			break;
 		}
 
 	}
@@ -54,11 +84,13 @@ public class EmployeeWage {
 
 		obj.Wlcm();
 
-		obj.employeeAttdence();
+		obj.employeeAttendance();
 
 		obj.dailyWage();
 
 		obj.checkPartAndFullTime();
+
+		obj.attendanceBySwitchCase();
 	}
 
 }
