@@ -12,6 +12,8 @@ public class EmployeeWage {
 
 	int empHr;
 
+	int daysPerMonth = 20;
+
 	public void Wlcm() {
 
 		System.out.println("Welcome to Employee Wage Computation Program ");
@@ -59,6 +61,7 @@ public class EmployeeWage {
 			empHr = 0;
 			break;
 		}
+		System.out.println();
 
 	}
 
@@ -78,6 +81,15 @@ public class EmployeeWage {
 		System.out.println("Full Time Wage = " + FullTimeWage);
 	}
 
+	public void monthlyWage() {
+
+		int dailyWage = wagePerHours * dailyHours;
+
+		int MonthlyWage = dailyWage * daysPerMonth;
+
+		System.out.println("Monthly wage  = " + MonthlyWage);
+	}
+
 	public static void main(String[] args) {
 
 		EmployeeWage obj = new EmployeeWage();
@@ -91,6 +103,9 @@ public class EmployeeWage {
 		obj.checkPartAndFullTime();
 
 		obj.attendanceBySwitchCase();
+
+		obj.monthlyWage();
+
 	}
 
 }
