@@ -2,6 +2,10 @@ package com.day4EmployeeWage;
 
 public class EmployeeWage {
 
+	int WAGE_HOURS = 20;
+
+	int DAILY_HOURS = 8;
+
 	public void Wlcm() {
 
 		System.out.println("Welcome to Employee Wage Computation Program ");
@@ -21,6 +25,11 @@ public class EmployeeWage {
 		else {
 			System.out.println("Employee is Absent");
 		}
+
+	}
+
+	public void dailyWage() {
+		System.out.println("Daily Employee Wage is: " + WAGE_HOURS * DAILY_HOURS);
 	}
 
 	public static void main(String[] args) {
@@ -31,6 +40,7 @@ public class EmployeeWage {
 
 		obj.employeeAttdence();
 
+		obj.dailyWage();
 	}
 
 }
