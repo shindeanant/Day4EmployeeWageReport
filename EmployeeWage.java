@@ -2,9 +2,13 @@ package com.day4EmployeeWage;
 
 public class EmployeeWage {
 
-	int WAGE_HOURS = 20;
+	int wagePerHours = 20;
 
-	int DAILY_HOURS = 8;
+	int dailyHours = 8;
+
+	int fullTimeHours = 8;
+
+	int partTimeHours = 4;
 
 	public void Wlcm() {
 
@@ -29,7 +33,19 @@ public class EmployeeWage {
 	}
 
 	public void dailyWage() {
-		System.out.println("Daily Employee Wage is: " + WAGE_HOURS * DAILY_HOURS);
+
+		System.out.println("Daily Employee Wage is: " + wagePerHours * dailyHours);
+	}
+
+	public void checkPartAndFullTime() {
+
+		int PartTimeWage = wagePerHours * partTimeHours;
+
+		int FullTimeWage = wagePerHours * fullTimeHours;
+
+		System.out.println("Part Time Wage = " + PartTimeWage);
+
+		System.out.println("Full Time Wage = " + FullTimeWage);
 	}
 
 	public static void main(String[] args) {
@@ -41,6 +57,8 @@ public class EmployeeWage {
 		obj.employeeAttdence();
 
 		obj.dailyWage();
+
+		obj.checkPartAndFullTime();
 	}
 
 }
